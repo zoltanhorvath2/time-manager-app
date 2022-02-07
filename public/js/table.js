@@ -10,5 +10,21 @@ $('#cancel-button').on('click', function(){
     $('#add-new-modal').addClass('hidden');
 })
 
+/* Add date and timepicker */
+
+$('#date').datepicker({
+    dayNamesMin: [ "V", "H", "Ke", "Sze", "Cs", "P", "Szo" ],
+    dateFormat:'yy-mm-dd'
+});
+
+$('#time').timepicker({
+    timeFormat: 'HH:mm',
+    interval: 10,
+    startTime: '8:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+})
+
 
 })

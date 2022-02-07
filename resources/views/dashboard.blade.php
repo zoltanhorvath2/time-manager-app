@@ -18,8 +18,8 @@
                             <div class="bg-white px-16 py-14 rounded-md text-center">
                               <h1 class="text-xl mb-4 font-bold text-slate-500">Add new record</h1>
                               <form action="" method="post">
-                                <input name="datetime" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="datetime" type="text" placeholder="Date and time">
-                                <input name="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Title">
+                                <input name="date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="date" type="text" placeholder="Date">
+                                <input name="time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="time" type="text" placeholder="Time">
                                 <textarea
                                     class="
                                         form-control
