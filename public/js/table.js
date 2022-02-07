@@ -8,7 +8,14 @@ $('#add-new-button').on('click', function(){
 
 $('#cancel-button').on('click', function(){
     $('#add-new-modal').addClass('hidden');
+    clearInputs();
 })
+
+function clearInputs(){
+    $('#date').val('');
+    $('#time').val('');
+    $('#description').val('');
+}
 
 /* Add date and timepicker */
 
