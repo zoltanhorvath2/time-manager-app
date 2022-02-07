@@ -6,7 +6,12 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                        <div class="logo-wrapper">
+                            <i class="fas fa-clock icon"></i>
+                            <div class="title">
+                                Time Management Application
+                            </div>
+                        </div>
                     </a>
                 </div>
 
