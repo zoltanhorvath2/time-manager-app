@@ -24,14 +24,5 @@ $('#date').datepicker({
     dateFormat:'yy-mm-dd'
 });
 
-$('#time').timepicker({
-    timeFormat: 'HH:mm',
-    interval: 10,
-    startTime: '8:00',
-    dynamic: false,
-    dropdown: true,
-    scrollbar: true
-})
-
 
 })
