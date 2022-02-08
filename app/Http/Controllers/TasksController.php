@@ -50,8 +50,10 @@ class TasksController extends Controller
 
     public function list(){
         $tasks = Task::where('user_id', Auth::id())
-                ->get()->groupBy('week_index');
+                ->orderBy('week_index')
+                ->get()
+                ->groupBy('week_index');
 
-        dd($tasks->toArray());
+        return response()->json(['code' => 1, 'weeks'=> $tasks]);
     }
 }

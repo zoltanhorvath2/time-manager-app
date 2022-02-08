@@ -1,5 +1,7 @@
 $(function(){
 
+const path = window.location.href.split('dashboard')[0];
+
 /* Handle csrf tokens in ajax requests */
 $.ajaxSetup({
     headers: {
@@ -44,7 +46,6 @@ $('#save-button').on('click', function(){
     const date = $('#date').val();
     const hours = $('#hours').val();
     const description = $('#description').val();
-    const path = window.location.href.split('dashboard')[0];
     $.ajax({
         url: path  + "tasks/new",
         method: "POST",
@@ -55,6 +56,7 @@ $('#save-button').on('click', function(){
                 toastr.success(data.success_message)
                 $('#add-new-modal').addClass('hidden');
                 clearInputs();
+                renderTable();
             }else{
                 $('#error-messages').text('');
                 for(let i = 0; i < data.error_messages.length; i++){
@@ -71,8 +73,46 @@ $('#save-button').on('click', function(){
     })
 })
 
-function renderTable(data){
+function renderTable(){
+        $.ajax({
+            url: path  + "tasks/list",
+            method: "GET",
+            dataType: "json",
+            success: function(data){
+                console.log(data)
+                clearTable()
+                drawTable(data);
+            },
+            error: function(error){
+             console.log(error);
+        }
+    })
+};
 
+/* Render table onload */
+renderTable();
+
+function drawTable(data){
+    for(let week_index in data.weeks){
+        $('tbody.table-hover').append(`
+        <tr>
+            <td class="text-left days-${week_index}" id="Monday"></td>
+            <td class="text-left days-${week_index}" id="Tuesday"></td>
+            <td class="text-left days-${week_index}" id="Wednesday"></td>
+            <td class="text-left days-${week_index}" id="Thursday"></td>
+            <td class="text-left days-${week_index}" id="Friday"></td>
+            <td class="text-left"></td>
+            <td class="text-left">${week_index}</td>
+        </tr>
+        `)
+        $(`td.days-${week_index}`).each(function(){
+            $(this).text(`${week_index}`);
+        })
+    }
+}
+
+function clearTable(){
+    $('tbody.table-hover').text('');
 }
 
 

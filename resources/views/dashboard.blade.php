@@ -67,15 +67,7 @@
                             </tr>
                         </thead>
                         <tbody class="table-hover">
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
