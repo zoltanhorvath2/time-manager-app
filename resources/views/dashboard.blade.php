@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Task times') }}
         </h2>
     </x-slot>
 
@@ -17,9 +17,9 @@
                         <div id="add-new-modal" class="hidden bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
                             <div class="bg-white px-16 py-14 rounded-md text-center">
                               <h1 class="text-xl mb-4 font-bold text-slate-500">Add new record</h1>
-                              <form action="" method="post">
+                              <form action="" method="post" id="new-task-form">
                                 <input name="date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="date" type="text" placeholder="Date">
-                                <input name="time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="time" type="text" placeholder="Time">
+                                <input name="hours" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="hours" type="number" min="1" max="12" placeholder="Time required">
                                 <textarea
                                     class="
                                         form-control
@@ -43,8 +43,13 @@
                                     placeholder="Description"
                                 ></textarea>
                               </form>
+                              <div>
+                                  <ul id="error-messages" class="mb-2">
+                                    {{-- Error messages go here via jquery --}}
+                                  </ul>
+                              </div>
                               <button id="cancel-button" class="bg-indigo-500 px-4 py-2 rounded-md text-md text-white">Cancel</button>
-                              <button class="bg-green-500 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold">Save</button>
+                              <button id="save-button" class="bg-green-500 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold">Save</button>
                             </div>
                           </div>
                     </div>
@@ -62,42 +67,6 @@
                             </tr>
                         </thead>
                         <tbody class="table-hover">
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
                             <tr>
                                 <td class="text-left">Elfoglaltság</td>
                                 <td class="text-left">Elfoglaltság</td>
