@@ -43,6 +43,11 @@
                                     placeholder="Description"
                                 ></textarea>
                               </form>
+                              <div>
+                                  <ul id="error-messages" class="mb-2">
+                                    {{-- Error messages go here via jquery --}}
+                                  </ul>
+                              </div>
                               <button id="cancel-button" class="bg-indigo-500 px-4 py-2 rounded-md text-md text-white">Cancel</button>
                               <button id="save-button" class="bg-green-500 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold">Save</button>
                             </div>
@@ -62,42 +67,6 @@
                             </tr>
                         </thead>
                         <tbody class="table-hover">
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">Elfoglaltság</td>
-                                <td class="text-left">8 óra</td>
-                                <td class="text-left">1.</td>
-                            </tr>
                             <tr>
                                 <td class="text-left">Elfoglaltság</td>
                                 <td class="text-left">Elfoglaltság</td>

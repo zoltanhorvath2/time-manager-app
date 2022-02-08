@@ -23,6 +23,7 @@ function clearInputs(){
     $('#date').val('');
     $('#time').val('');
     $('#description').val('');
+    $('#error-messages').text('');
 }
 
 /* Add date and timepicker */
@@ -35,6 +36,7 @@ $('#date').datepicker({
 /* Add new record to the tasks table */
 
 $('#save-button').on('click', function(){
+    $('#error-messages').text('');
     $('#new-task-form').on('submit', function(e){
         e.preventDefault();
     })
@@ -48,17 +50,29 @@ $('#save-button').on('click', function(){
         data: { date : date, hours: hours, description: description },
         dataType: "json",
         success: function(data){
-            console.log(data);
+            if(data.code === 1){
+                toastr.success(data.success_message)
+                $('#add-new-modal').addClass('hidden');
+                clearInputs();
+            }else{
+                $('#error-messages').text('');
+                for(let i = 0; i < data.error_messages.length; i++){
+                    $('#error-messages').append(`
+                        <li class="text-red-500">${data.error_messages[i]}</li>
+                    `);
+                }
+            }
+
         },
         error: function(error){
             console.log(error);
         }
     })
-
-    //Clear form inputs and close modal
-    $('#add-new-modal').addClass('hidden');
-    clearInputs();
 })
+
+function renderTable(data){
+
+}
 
 
 })
