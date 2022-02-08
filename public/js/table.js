@@ -30,7 +30,8 @@ function clearInputs(){
 
 $('#date').datepicker({
     dayNamesMin: [ "V", "H", "Ke", "Sze", "Cs", "P", "Szo" ],
-    dateFormat:'yy-mm-dd'
+    dateFormat:'yy-mm-dd',
+    beforeShowDay: $.datepicker.noWeekends
 });
 
 /* Add new record to the tasks table */

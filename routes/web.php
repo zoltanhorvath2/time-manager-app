@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth'], function(){
         return view('dashboard');
     })->name('dashboard');
     Route::post('/tasks/new', [TasksController::class, 'new']);
+    Route::get('/tasks/list', [TasksController::class, 'list'])->name('list');
 });
 
 require __DIR__.'/auth.php';

@@ -47,4 +47,11 @@ class TasksController extends Controller
         }
     	return response()->json(['code' => 0, 'error_messages'=>$validator->errors()->all()]);
     }
+
+    public function list(){
+        $tasks = Task::where('user_id', Auth::id())
+                ->get()->groupBy('week_index');
+
+        dd($tasks->toArray());
+    }
 }
