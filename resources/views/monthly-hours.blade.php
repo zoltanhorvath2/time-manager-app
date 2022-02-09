@@ -15,34 +15,16 @@
                     <table class="table-fill" id='months-table'>
                         <thead>
                             <tr>
-                                <th class="text-left">Jan</th>
-                                <th class="text-left">Feb</th>
-                                <th class="text-left">Már</th>
-                                <th class="text-left">Ápr</th>
-                                <th class="text-left">Máj</th>
-                                <th class="text-left">Jún</th>
-                                <th class="text-left">Júl</th>
-                                <th class="text-left">Aug</th>
-                                <th class="text-left">Szep</th>
-                                <th class="text-left">Okt</th>
-                                <th class="text-left">Nov</th>
-                                <th class="text-left">Dec</th>
+                                @foreach ($data as $perMonth)
+                                    <th class="text-left">2022.{{$perMonth->month}}</td>
+                                @endforeach
                             </tr>
                         </thead>
                         <tbody class="">
                             <tr>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
-                                <td class="text-left"></td>
+                                @foreach ($data as $perMonth)
+                                    <td class="text-left">{{$perMonth->total_hours}} óra</td>
+                                @endforeach
                             </tr>
                         </tbody>
                     </table>
