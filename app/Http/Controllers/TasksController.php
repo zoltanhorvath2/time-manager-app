@@ -38,11 +38,11 @@ class TasksController extends Controller
             if($newTask){
                 return response()->json([
                     'code' => 1,
-                    'success_message'=>'New record has been added.',
+                    'success_message'=>'Új rekord hozzáadva.',
                     'data' => $request->all()
                 ]);
             }else{
-                return response()->json(['code' => 0, 'error_messages'=> 'Saving failed']);
+                return response()->json(['code' => 0, 'error_messages'=> 'Mentés sikertelen!']);
             }
         }
     	return response()->json(['code' => 0, 'error_messages'=>$validator->errors()->all()]);

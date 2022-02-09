@@ -4,7 +4,7 @@
             <a href="/" hidden>
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
-            <h2>Please log in to continue!</h2>
+            <h2>A folytatáshoz jelentkezzen be!</h2>
         </x-slot>
 
         <!-- Session Status -->
@@ -25,7 +25,7 @@
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('Jelszó')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -37,10 +37,10 @@
             <div class="flex items-center justify-end mt-4">
 
                 <x-button class="ml-3">
-                    {{ __('Log in') }}
+                    {{ __('Bejelentkezés') }}
                 </x-button>
             </div>
-            <a href="{{ url()->previous() }}"><h3>&leftarrow; Back to the frontpage</h3></a>
+            <a href="{{ url()->previous() }}"><h3>&leftarrow; Vissza a kezdőoldalra</h3></a>
         </form>
     </x-auth-card>
 </x-guest-layout>
