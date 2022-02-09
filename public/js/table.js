@@ -109,16 +109,15 @@ function drawTable(data){
         `)
         /* Iterate over every day td in the row */
         $(`.days-${key}`).each(function(){
-            /* Iterate over every possible elements in a cell  and filter it */
+            /* Iterate over every possible elements in a cell and filter it based on element ID */
             data.weeks[key].forEach((item) => {
                 if(item.day === $(this).attr('id')){
                     $(`.days-${key}#` + $(this).attr('id')).append(
+                        '<div class="bg-green-400 text-white py-1 px-2 mb-2 rounded">' +
                         item.hours +
-                        " - " +
+                        " óra - " +
                         item.description +
-                        " - " +
-                        item.day +
-                         "<br>")
+                         "<br></div>")
                 }
             })
         })

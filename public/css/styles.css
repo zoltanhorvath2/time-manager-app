@@ -65,7 +65,7 @@ body {
 }
 
 .add-button-container button:hover{
-    color: white;
+    color: black;
 }
 
 .modal-wrapper {
@@ -74,5 +74,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#toast-container > .toast-success {
+    background-color: #4ADE80;
 }
 

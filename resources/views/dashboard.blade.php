@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="add-button-container">
-                        <button id="add-new-button" class="rounded-lg px-4 py-2 my-2 bg-green-300"
+                        <button id="add-new-button" class="rounded-lg px-4 py-2 my-2 bg-green-400 text-white"
                         type="button">Add new</button>
                     </div>
                     <div class="modal-wrapper">
@@ -48,8 +48,8 @@
                                     {{-- Error messages go here via jquery --}}
                                   </ul>
                               </div>
-                              <button id="cancel-button" class="bg-indigo-500 px-4 py-2 rounded-md text-md text-white">Cancel</button>
-                              <button id="save-button" class="bg-green-500 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold">Save</button>
+                              <button id="cancel-button" class="bg-blue-400 px-4 py-2 rounded-md text-md text-white">Cancel</button>
+                              <button id="save-button" class="bg-green-400 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold">Save</button>
                             </div>
                           </div>
                     </div>
@@ -67,7 +67,7 @@
                             </tr>
                         </thead>
                         <tbody class="table-hover">
-                            
+
                         </tbody>
                     </table>
                 </div>
