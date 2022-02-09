@@ -58,6 +58,7 @@ function renderTable(){
 renderTable();
 
 function drawTable(data){
+
     for(let key of Object.keys(data.weeks)){
 
         /* Append a row and add a class for the days cells */
@@ -107,8 +108,6 @@ function drawTable(data){
 function clearTable(){
     $('tbody.table-hover').text('');
 }
-
-
 
 
 /* Add new record to the tasks table */

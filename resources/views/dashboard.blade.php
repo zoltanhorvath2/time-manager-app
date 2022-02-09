@@ -9,11 +9,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200" id="overflowing">
-                    <div class="add-button-container">
-                        <button id="add-new-button" class="rounded-lg px-4 py-2 my-2 bg-green-400 text-white"
-                        type="button">Új hozzáadása</button>
+                    <div id="total-hours">
+                        
                     </div>
-                    
+                    <div class="add-button-container">
+                        <button id="add-new-button" class="rounded-lg px-4 py-2 mb-3 bg-green-400 text-white"
+                        type="button"><i class="fa-solid fa-plus"></i> Új hozzáadása</button>
+                    </div>
+
                     {{-- Modal --}}
 
                     <div class="modal-wrapper">

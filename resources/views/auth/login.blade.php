@@ -40,7 +40,7 @@
                     {{ __('Bejelentkezés') }}
                 </x-button>
             </div>
-            <a href="{{ url()->previous() }}"><h3>&leftarrow; Vissza a kezdőoldalra</h3></a>
+            <a href="{{ route('welcome') }}"><h3>&leftarrow; Vissza a kezdőoldalra</h3></a>
         </form>
     </x-auth-card>
 </x-guest-layout>

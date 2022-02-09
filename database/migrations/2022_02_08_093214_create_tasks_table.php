@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('description');
             $table->date('date');
             $table->string('day');
+            $table->string('month');
             $table->integer('week_index');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();

@@ -28,6 +28,7 @@ class TasksController extends Controller
             $task->date = $request->date;
             $task->description = $request->description;
             $task->day = Carbon::parse($request->date)->format('l');
+            $task->month = Carbon::parse($request->date)->format('m');
             $task->week_index = Carbon::parse($request->date)->weekOfYear;
             $task->user_id = Auth::id();
             $task->created_at = Carbon::now();
