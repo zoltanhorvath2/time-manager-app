@@ -94,6 +94,8 @@ renderTable();
 
 function drawTable(data){
     for(let key of Object.keys(data.weeks)){
+
+        /* Append a row and add a class for the days cells */
         $('tbody.table-hover').append(`
         <tr>
             <td class="text-left days-${key}" id="Monday"></td>
@@ -105,10 +107,18 @@ function drawTable(data){
             <td class="text-left">${key}</td>
         </tr>
         `)
+        /* Iterate over every day td in the row */
         $(`.days-${key}`).each(function(){
+            /* Iterate over every possible elements in a cell  and filter it */
             data.weeks[key].forEach((item) => {
-                if(item.day = $(`.days-${key}`).attr('id')){
-                    $(`.days-${key}`).append(item.hours + " - " + item.description + "<br>")
+                if(item.day === $(this).attr('id')){
+                    $(`.days-${key}#` + $(this).attr('id')).append(
+                        item.hours +
+                        " - " +
+                        item.description +
+                        " - " +
+                        item.day +
+                         "<br>")
                 }
             })
         })
