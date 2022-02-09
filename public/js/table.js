@@ -93,22 +93,27 @@ function renderTable(){
 renderTable();
 
 function drawTable(data){
-    for(let week_index in data.weeks){
+    for(let key of Object.keys(data.weeks)){
         $('tbody.table-hover').append(`
         <tr>
-            <td class="text-left days-${week_index}" id="Monday"></td>
-            <td class="text-left days-${week_index}" id="Tuesday"></td>
-            <td class="text-left days-${week_index}" id="Wednesday"></td>
-            <td class="text-left days-${week_index}" id="Thursday"></td>
-            <td class="text-left days-${week_index}" id="Friday"></td>
+            <td class="text-left days-${key}" id="Monday"></td>
+            <td class="text-left days-${key}" id="Tuesday"></td>
+            <td class="text-left days-${key}" id="Wednesday"></td>
+            <td class="text-left days-${key}" id="Thursday"></td>
+            <td class="text-left days-${key}" id="Friday"></td>
             <td class="text-left"></td>
-            <td class="text-left">${week_index}</td>
+            <td class="text-left">${key}</td>
         </tr>
         `)
-        $(`td.days-${week_index}`).each(function(){
-            $(this).text(`${week_index}`);
+        $(`.days-${key}`).each(function(){
+            data.weeks[key].forEach((item) => {
+                if(item.day = $(`.days-${key}`).attr('id')){
+                    $(`.days-${key}`).append(item.hours + " - " + item.description + "<br>")
+                }
+            })
         })
     }
+
 }
 
 function clearTable(){
