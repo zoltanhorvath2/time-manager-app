@@ -93,7 +93,6 @@ function drawTable(data){
 
                     /* Add hours */
                     totalWeeklyHours += item.hours
-
                 }
             })
         })
@@ -103,6 +102,10 @@ function drawTable(data){
         `)
     }
 
+}
+
+function renderHoursPerMonth(){
+    
 }
 
 function clearTable(){
@@ -131,6 +134,7 @@ $('#save-button').on('click', function(){
                 $('#add-new-modal').addClass('hidden');
                 clearInputs();
                 renderTable();
+                renderHoursPerMonth();
             }else{
                 $('#error-messages').text('');
                 for(let i = 0; i < data.error_messages.length; i++){

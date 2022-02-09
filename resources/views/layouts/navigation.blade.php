@@ -20,6 +20,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Feladatnyilvántartás') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('monthly-hours')" :active="request()->routeIs('monthly-hours')">
+                        {{ __('Havi óraszámok') }}
+                    </x-nav-link>
                 </div>
             </div>
 

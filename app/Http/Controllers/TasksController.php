@@ -55,6 +55,17 @@ class TasksController extends Controller
                 ->get()
                 ->groupBy('week_index');
 
-        return response()->json(['code' => 1, 'weeks'=> $tasks]);
+        $hoursPerMonth = Task::where('user_id', Auth::id())
+                ->groupBy('month')
+                ->selectRaw("month, SUM(hours) as total_hours")
+                ->orderBy('month')
+                ->get()
+                ->toArray();
+
+        return response()->json([
+            'code' => 1,
+            'weeks'=> $tasks,
+            'hours_per_month' => $hoursPerMonth
+        ]);
     }
 }
