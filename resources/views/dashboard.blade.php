@@ -8,11 +8,14 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-6 bg-white border-b border-gray-200" id="overflowing">
                     <div class="add-button-container">
                         <button id="add-new-button" class="rounded-lg px-4 py-2 my-2 bg-green-400 text-white"
                         type="button">Új hozzáadása</button>
                     </div>
+                    
+                    {{-- Modal --}}
+
                     <div class="modal-wrapper">
                         <div id="add-new-modal" class="hidden bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
                             <div class="bg-white px-16 py-14 rounded-md text-center">
@@ -54,6 +57,10 @@
                           </div>
                     </div>
 
+                    {{-- Modal ends --}}
+
+                    {{-- Table --}}
+
                     <table class="table-fill">
                         <thead>
                             <tr>
@@ -62,7 +69,7 @@
                                 <th class="text-left">Szerda</th>
                                 <th class="text-left">Csütörtök</th>
                                 <th class="text-left">Péntek</th>
-                                <th class="text-left">Összeg</th>
+                                <th class="text-left">Összesen</th>
                                 <th class="text-left">Hét</th>
                             </tr>
                         </thead>
@@ -70,6 +77,9 @@
 
                         </tbody>
                     </table>
+
+                    {{-- Table ends --}}
+
                 </div>
             </div>
         </div>

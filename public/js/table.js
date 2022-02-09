@@ -45,7 +45,6 @@ function renderTable(){
         method: "GET",
         dataType: "json",
         success: function(data){
-            console.log(data)
             clearTable()
             drawTable(data);
         },
