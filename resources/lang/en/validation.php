@@ -100,7 +100,7 @@ return [
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
     'numeric' => 'The :attribute must be a number.',
-    'password' => 'The password is incorrect.',
+    'password' => 'Helytelen jelszó.',
     'present' => 'The :attribute field must be present.',
     'prohibited' => 'The :attribute field is prohibited.',
     'prohibited_if' => 'The :attribute field is prohibited when :other is :value.',
@@ -141,9 +141,18 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'A felhasználónév megadása kötelező!',
         ],
+        'email' => [
+            'required' => 'Email cím megadása kötelező!',
+        ],
+        'password' => [
+            'required' => 'Jelszó megadása kötelező!',
+        ],
+        'password_confirmation' => [
+            'required' => 'Jelszó megerősítése kötelező!'
+        ]
     ],
 
     /*

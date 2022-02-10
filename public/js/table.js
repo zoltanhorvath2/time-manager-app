@@ -54,8 +54,10 @@ function renderTable(){
 })
 };
 
-/* Render table onload */
-renderTable();
+/* Render table onload dashboard */
+if(window.location.href.includes('dashboard')){
+    renderTable();
+}
 
 function drawTable(data){
 
@@ -102,10 +104,6 @@ function drawTable(data){
         `)
     }
 
-}
-
-function renderHoursPerMonth(){
-    
 }
 
 function clearTable(){
