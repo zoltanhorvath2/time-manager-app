@@ -1,11 +1,14 @@
 #Installation guide for Simple-Laravel-Crm
 
 #Prequisities:
+
 * PHP 8.0.11 <
 * MySQL Ver 8.0.26 <
 * Composer version 2.1.6 <
 * Npm 7.24.0 <
+
 #Installation:
+
 * Run 'git clone https://github.com/zoltanhorvath2/time-manager-app.git'
 * Navigate into project root
 * Run 'composer install'
