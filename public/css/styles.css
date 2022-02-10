@@ -26,7 +26,6 @@ body {
 
 .icon {
     font-size: 2.2rem;
-    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -65,7 +64,7 @@ body {
 }
 
 .add-button-container button:hover{
-    color: white;
+    color: black;
 }
 
 .modal-wrapper {
@@ -74,5 +73,13 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#toast-container > .toast-success {
+    background-color: #4ADE80;
+}
+
+#overflowing {
+    overflow: scroll;
 }
 

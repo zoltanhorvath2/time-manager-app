@@ -28,6 +28,7 @@ class TasksController extends Controller
             $task->date = $request->date;
             $task->description = $request->description;
             $task->day = Carbon::parse($request->date)->format('l');
+            $task->month = Carbon::parse($request->date)->format('m');
             $task->week_index = Carbon::parse($request->date)->weekOfYear;
             $task->user_id = Auth::id();
             $task->created_at = Carbon::now();
@@ -38,11 +39,11 @@ class TasksController extends Controller
             if($newTask){
                 return response()->json([
                     'code' => 1,
-                    'success_message'=>'New record has been added.',
+                    'success_message'=>'Új rekord hozzáadva.',
                     'data' => $request->all()
                 ]);
             }else{
-                return response()->json(['code' => 0, 'error_messages'=> 'Saving failed']);
+                return response()->json(['code' => 0, 'error_messages'=> 'Mentés sikertelen!']);
             }
         }
     	return response()->json(['code' => 0, 'error_messages'=>$validator->errors()->all()]);
@@ -54,6 +55,9 @@ class TasksController extends Controller
                 ->get()
                 ->groupBy('week_index');
 
-        return response()->json(['code' => 1, 'weeks'=> $tasks]);
+        return response()->json([
+            'code' => 1,
+            'weeks'=> $tasks
+        ]);
     }
 }

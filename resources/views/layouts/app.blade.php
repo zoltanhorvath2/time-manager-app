@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Time Management Application') }}</title>
+        <title>{{ config('app.name', 'Time Manager') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -22,11 +22,11 @@
 
         {{-- FONTAWESOME --}}
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
         {{-- Date and timepickers --}}
 
-        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
          rel = "stylesheet">
         <script src = "https://code.jquery.com/jquery-1.10.2.js" defer></script>
         <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" defer></script>

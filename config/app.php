@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Time Management Application'),
+    'name' => env('APP_NAME', 'Time Manager Application'),
 
     /*
     |--------------------------------------------------------------------------
