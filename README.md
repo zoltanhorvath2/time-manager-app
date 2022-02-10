@@ -1,4 +1,4 @@
-#Installation guide for Simple-Laravel-Crm
+#Installation guide for Time Manager App
 
 #Prequisities:
 
