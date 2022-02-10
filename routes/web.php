@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => ['auth', 'prevent-back-history']], function(){
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

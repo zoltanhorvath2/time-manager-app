@@ -22,7 +22,7 @@ $('#cancel-button').on('click', function(){
 
 function clearInputs(){
     $('#date').val('');
-    $('#time').val('');
+    $('#hours').val('');
     $('#description').val('');
     $('#error-messages').text('');
 }
